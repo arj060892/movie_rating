@@ -16,14 +16,16 @@ export class UserService {
   }
   isUservalid(email: string, password: string): boolean {
     const users: IUser[] = JSON.parse(sessionStorage.getItem('users'));
-    const validUser = users.filter((user: IUser) => user.emailId === email && user.password === password);
-    if (validUser.length > 0) {
-      sessionStorage.setItem('userLogged', 'JWT');
-      this.userSubject.next(true);
-      return true;
-    } else {
-      return false;
+    // tslint:disable-next-line:curly
+    if (users) {
+      const validUser = users.filter((user: IUser) => user.emailId === email && user.password === password);
+      if (validUser.length > 0) {
+        sessionStorage.setItem('userLogged', 'JWT');
+        this.userSubject.next(true);
+        return true;
+      }
     }
+    return false;
   }
   logOutUser() {
     sessionStorage.removeItem('userLogged');

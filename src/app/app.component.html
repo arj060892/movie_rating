@@ -6,7 +6,9 @@
   </span>
   <span class="navbar-right" *ngIf="isUserLogged">
     Hello user! &nbsp;
-    <a (click)="logout()">Logout</a>
+    <small class="text-muted">
+      <a (click)="logout()">Logout</a>
+    </small>
   </span>
 </nav>
 <hr>

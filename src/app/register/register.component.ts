@@ -44,7 +44,6 @@ export class RegisterComponent {
       };
 
       this.userService.registerUser(userDtls);
-      alert('sucess');
       this.route.navigate(['/dashboard']);
     } else {
       this.isFormError = true;

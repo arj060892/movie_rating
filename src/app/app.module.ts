@@ -12,7 +12,7 @@ import { UserService } from './helpers/services/user.service';
 import { AuthGuardService } from './helpers/services/auth-guard.service';
 
 const routes: Routes = [
-  { path: '*', redirectTo: '', pathMatch: 'full' },
+  { path: '*', redirectTo: 'login', pathMatch: 'full' },
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuardService] },

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '../../../node_modules/@angular/forms';
 import { Utility } from '../helpers/utility';
 import { UserService } from '../helpers/services/user.service';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,9 @@ import { UserService } from '../helpers/services/user.service';
 export class LoginComponent {
   loginForm: FormGroup;
   isUserInValid = false;
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private fb: FormBuilder,
+    private route: Router,
+    private userService: UserService) {
     this.loginForm = fb.group({
       email: new FormControl('', Validators.email),
       password: new FormControl('', Validators.required)
@@ -28,7 +31,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       if ((this.userService.isUservalid(this.emailControl.value, this.passwordControl.value))) {
         this.isUserInValid = false;
-        alert('success');
+        this.route.navigate(['/dashboard']);
       } else {
         this.isUserInValid = true;
       }
