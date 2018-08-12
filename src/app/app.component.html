@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-light">
+  <a class="navbar-brand" [routerLink]="['/dashboard']">Rate-Me</a>
+  <span class="navbar-right" *ngIf="!isUserLogged">
+    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/register']">Register</a>
+  </span>
+  <span class="navbar-right" *ngIf="isUserLogged">
+    Hello user! &nbsp;
+    <a (click)="logout()">Logout</a>
+  </span>
+</nav>
+<hr>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

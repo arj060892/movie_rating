@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Register</h2>
+      <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" class="form-control" placeholder="Full Name" formControlName="fullName">
+          <div class="alert alert-danger" *ngIf="fullNameControl.hasError('required') && fullNameControl.touched">
+            <strong>Error!</strong> Required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" placeholder="Email" formControlName="email">
+          <div class="alert alert-danger" *ngIf="emailControl.hasError('email') && emailControl.touched">
+            <strong>Error!</strong> Please enter valid email id.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" placeholder="Password" formControlName="password">
+          <div class="alert alert-danger" *ngIf="passwordControl.hasError('required') && passwordControl.touched">
+            <strong>Error!</strong> Field Required.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <div class="alert alert-danger" *ngIf="isFormError">
+          <strong>Error!</strong> Something went wrong
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Login</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" placeholder="Email" formControlName="email">
+          <!-- <div class="alert alert-danger" *ngIf="emailControl.hasError('required') && emailControl.touched">
+            <strong>Error!</strong> Field Required.
+          </div> -->
+          <div class="alert alert-danger" *ngIf="emailControl.hasError('email') && emailControl.touched">
+            <strong>Error!</strong> Please enter valid email id.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" i placeholder="Password" formControlName="password">
+          <div class="alert alert-danger" *ngIf="passwordControl.hasError('required') && passwordControl.touched">
+            <strong>Error!</strong> Field Required.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="alert alert-danger" *ngIf="isUserInValid">
+          <strong>Error!</strong> Invalid Credentials.
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Search by Movie Name" #searchControl>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)=search(searchControl)>Search</button>
+    </div>
+  </div>
+  <hr>
+
+  <ul class="pagination">
+    <li class="page-item" *ngFor="let page of pagination" (click)=onPageChanged(page)>
+      <a class="page-link">{{page}}</a>
+    </li>
+  </ul>
+
+  <hr>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Movie Name
+          <small (click)='sort("movie")' class="text-muted">[Sort]</small>
+        </th>
+        <th>Release Date
+          <small (click)='sort("releaseDate")' class="text-muted">[Sort]</small>
+        </th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movieResultSet">
+        <td>{{movie.movie}}</td>
+        <td>{{movie.releaseDate| date: 'dd/MM/yyyy'}}</td>
+        <td>{{movie.ratings}}</td>
+      </tr>
+      <tr *ngIf="movieResultSet.length==0">
+        <td colspan='3'>*No results found</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

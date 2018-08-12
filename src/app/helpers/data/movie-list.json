@@ -1,0 +1,87 @@
+[{
+    "movie": "aMovie 1",
+    "releaseDate": "2018-08-25",
+    "ratings": 3
+  }, {
+    "movie": "bMovie 2",
+    "releaseDate": "2018-08-3",
+    "ratings": 2
+  }, {
+    "movie": "cMovie 3",
+    "releaseDate": "2018-08-6",
+    "ratings": 5
+  }, {
+    "movie": "dMovie 4",
+    "releaseDate": "2018-08-7",
+    "ratings": 1
+  }, {
+    "movie": "eMovie 5",
+    "releaseDate": "2018-09-9",
+    "ratings": 2
+  }, {
+    "movie": "fMovie 6",
+    "releaseDate": "2018-09-23",
+    "ratings": 2
+  }, {
+    "movie": "gMovie 6",
+    "releaseDate": "2018-09-13",
+    "ratings": 3
+  },
+  {
+    "movie": "hMovie 7",
+    "releaseDate": "2018-09-10",
+    "ratings": 4
+  }, {
+    "movie": "iMovie 8",
+    "releaseDate": "2018-09-14",
+    "ratings": 2
+  }, {
+    "movie": "jMovie 8",
+    "releaseDate": "2018-09-16",
+    "ratings": 1
+  }, {
+    "movie": "kMovie 9",
+    "releaseDate": "2018-10-18",
+    "ratings": 3
+  }, {
+    "movie": "lMovie 10",
+    "releaseDate": "2018-10-14",
+    "ratings": 2
+  }, {
+    "movie": "mMovie 11",
+    "releaseDate": "2018-11-16",
+    "ratings": 4
+  }, {
+    "movie": "nMovie 12",
+    "releaseDate": "2018-10-14",
+    "ratings": 4
+  }, {
+    "movie": "oMovie 13",
+    "releaseDate": "2018-10-17",
+    "ratings": 2
+  }, {
+    "movie": "pMovie 14",
+    "releaseDate": "2018-10-11",
+    "ratings": 1
+  }, {
+    "movie": "qMovie 15",
+    "releaseDate": "2018-11-24",
+    "ratings": 3
+  }, {
+    "movie": "rMovie 16",
+    "releaseDate": "2018-12-6",
+    "ratings": 2
+  }, {
+    "movie": "sMovie 17",
+    "releaseDate": "2018-09-7",
+    "ratings": 4
+  }, {
+    "movie": "tMovie 18",
+    "releaseDate": "2018-09-30",
+    "ratings": 5
+  }, {
+    "movie": "zMovie 22",
+    "releaseDate": "2020-09-30",
+    "ratings": 5
+  }
+]
